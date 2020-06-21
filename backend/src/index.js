@@ -4,16 +4,31 @@ const app = express();
 
 app.get('/projects', (req, res) => {
     return res.json([
-        'Project1',
-        'Project2'
+        'Project 1',
+        'Project 2'
     ])
 });
 
-app.get('/projects', (req, res) => {
+app.post('/projects', (req, res) => {
     return res.json([
-        'Project1',
-        'Project2',
-        'Peoject3'
+        'Project 1',
+        'Project 2',
+        'Peoject 3'
+    ])
+});
+
+app.put('/projects/:id', (req, res) => {
+    return res.json([
+        'Project 4',
+        'Project 2',
+        'Peoject 3'
+    ])
+});
+
+app.delete('/projects/:id', (req, res) => {
+    return res.json([
+        'Project 2',
+        'Peoject 3'
     ])
 });
 
